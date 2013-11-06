@@ -1,0 +1,5 @@
+para instalar as dependencias:
+pip install -r requirements.txt
+
+para rodar o crawler estando na pasta sspider:
+scrapy crawl sspider

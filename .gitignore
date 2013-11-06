@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.swp
+*.py~
+*.swo
+*.kpf
+level*.txt
+cover
+.idea*
