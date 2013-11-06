@@ -10,7 +10,7 @@ BOT_NAME = 'sspider'
 
 SPIDER_MODULES = ['sspider.spiders']
 NEWSPIDER_MODULE = 'sspider.spiders'
-
+COOKIES_ENABLED = True
 DEPTH_LIMIT = 1
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Chrome/18.0.1025.133'

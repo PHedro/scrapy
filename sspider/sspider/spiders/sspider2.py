@@ -1,16 +1,13 @@
 __author__ = 'phedro'
 from scrapy.spider import BaseSpider
+from scrapy.http import Request
+from scrapy.http.response import Response
 
 
 class SSpider(BaseSpider):
-    name = "sspider"
+    name = "sspider2"
     allowed_domains = ["hughes.sieve.com.br"]
-    start_urls = [
-        "http://hughes.sieve.com.br:8000/level1/",
-        "http://hughes.sieve.com.br:8000/level3/",
-        "http://hughes.sieve.com.br:8000/level4/",
-        "http://hughes.sieve.com.br:8000/level5%25/"
-    ]
+    start_urls = ["http://hughes.sieve.com.br:8000/level2/"]
 
     def parse(self, response):
         filename = '{0}.txt'.format(response.url.split("/")[-2])
@@ -26,3 +23,13 @@ class SSpider(BaseSpider):
                 )
 
         open(filename, 'wb').write(prices)
+        return Request(
+            url=response.url,
+            cookies={
+                'name': 'd53db4de415c4e858dc761595623a898',
+                'value': '',
+                'domain': 'hughes.sieve.com.br',
+                'expires': 'session',
+                'path': '/'
+            },
+        )
