@@ -4,7 +4,7 @@ from scrapy.http import Request
 from scrapy.http.response import Response
 
 
-class SSpider(BaseSpider):
+class SSpider2(BaseSpider):
     name = "sspider2"
     allowed_domains = ["hughes.sieve.com.br"]
     start_urls = ["http://hughes.sieve.com.br:8000/level2/"]
