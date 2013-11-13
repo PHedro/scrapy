@@ -3,3 +3,6 @@ pip install -r requirements.txt
 
 para rodar o crawler estando na pasta sspider:
 scrapy crawl sspider
+scrapy crawl sspider2
+scrapy crawl sspider3
+scrapy crawl sspider5
